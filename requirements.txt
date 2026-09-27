@@ -2,3 +2,4 @@ Flask
 python-dotenv
 Authlib
 requests
+mysql-connector-python
