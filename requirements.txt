@@ -1,5 +1,4 @@
 Flask
 python-dotenv
-mysql-connector-python
 Authlib
-Werkzeug
+requests
