@@ -1,0 +1,1751 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<!-- ================================
+     HERO / BANNER SECTION
+================================= -->
+
+<section class="hero-section">
+
+    <div class="hero-container">
+
+        <!-- LEFT CONTENT -->
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                🚀 Find the Right Service
+            </span>
+
+            <h1>
+                Find the Right
+                <span>Service</span>
+                for Your Problem
+            </h1>
+
+            <p>
+                Discover trusted services, find the right professionals,
+                and get your everyday problems solved easily.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="/services" class="hero-btn primary-btn">
+                    Explore Services
+                </a>
+
+                <a href="/contact" class="hero-btn secondary-btn">
+                    Get Help
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="hero-visual">
+
+            <div class="hero-card">
+
+                <div class="hero-card-icon">
+                    🔧
+                </div>
+
+                <div>
+                    <h3>
+                        Need a Service?
+                    </h3>
+
+                    <p>
+                        Find the right solution quickly.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="floating-card card-one">
+
+                <span>💻</span>
+
+                <div>
+                    <strong>Technical</strong>
+                    <small>Support</small>
+                </div>
+
+            </div>
+
+
+            <div class="floating-card card-two">
+
+                <span>📚</span>
+
+                <div>
+                    <strong>Education</strong>
+                    <small>Services</small>
+                </div>
+
+            </div>
+
+
+            <div class="floating-card card-three">
+
+                <span>🏠</span>
+
+                <div>
+                    <strong>Home</strong>
+                    <small>Services</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =================================
+     SERVICE CATEGORIES SECTION
+================================= -->
+
+<section class="services-section">
+
+    <div class="services-container">
+
+        <!-- Section Heading -->
+
+        <div class="section-heading">
+
+            <span class="section-badge">
+                OUR SERVICES
+            </span>
+
+            <h2>
+                What Can We <span>Help You With?</span>
+            </h2>
+
+            <p>
+                Find the right service for your everyday needs.
+                Choose a category and explore available solutions.
+            </p>
+
+        </div>
+
+
+        <!-- Service Cards -->
+
+        <div class="services-grid">
+
+
+            <!-- Card 1 -->
+
+            <a href="/services/technical"
+               class="service-card">
+
+                <div class="service-icon">
+                    💻
+                </div>
+
+                <div class="service-content">
+
+                    <h3>
+                        Technical Support
+                    </h3>
+
+                    <p>
+                        Get help with laptops, computers,
+                        software and other technical problems.
+                    </p>
+
+                    <span class="service-link">
+                        Explore Service →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- Card 2 -->
+
+            <a href="/services/education"
+               class="service-card">
+
+                <div class="service-icon">
+                    📚
+                </div>
+
+                <div class="service-content">
+
+                    <h3>
+                        Education
+                    </h3>
+
+                    <p>
+                        Find tutors, learning resources and
+                        educational support.
+                    </p>
+
+                    <span class="service-link">
+                        Explore Service →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- Card 3 -->
+
+            <a href="/services/home"
+               class="service-card">
+
+                <div class="service-icon">
+                    🏠
+                </div>
+
+                <div class="service-content">
+
+                    <h3>
+                        Home Services
+                    </h3>
+
+                    <p>
+                        Find electricians, plumbers, cleaners
+                        and other home services.
+                    </p>
+
+                    <span class="service-link">
+                        Explore Service →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- Card 4 -->
+
+            <a href="/services/repair"
+               class="service-card">
+
+                <div class="service-icon">
+                    🔧
+                </div>
+
+                <div class="service-content">
+
+                    <h3>
+                        Repair Services
+                    </h3>
+
+                    <p>
+                        Get reliable repair services for
+                        mobile, appliances and electronics.
+                    </p>
+
+                    <span class="service-link">
+                        Explore Service →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- Card 5 -->
+
+            <a href="/services/career"
+               class="service-card">
+
+                <div class="service-icon">
+                    💼
+                </div>
+
+                <div class="service-content">
+
+                    <h3>
+                        Career Support
+                    </h3>
+
+                    <p>
+                        Get guidance for jobs, resumes,
+                        interviews and career development.
+                    </p>
+
+                    <span class="service-link">
+                        Explore Service →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- Card 6 -->
+
+            <a href="/services/other"
+               class="service-card">
+
+                <div class="service-icon">
+                    ⚡
+                </div>
+
+                <div class="service-content">
+
+                    <h3>
+                        Other Services
+                    </h3>
+
+                    <p>
+                        Can't find what you need?
+                        Explore more available services.
+                    </p>
+
+                    <span class="service-link">
+                        Explore Service →
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- View All Button -->
+
+        <div class="services-button">
+
+            <a href="/services">
+                View All Services →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =================================
+     HOW IT WORKS SECTION
+================================= -->
+
+<section class="how-section">
+
+    <div class="how-container">
+
+        <!-- Heading -->
+
+        <div class="section-heading">
+
+            <span class="section-badge">
+                HOW IT WORKS
+            </span>
+
+            <h2>
+                Get Help in <span>3 Simple Steps</span>
+            </h2>
+
+            <p>
+                Finding the right service doesn't have to be complicated.
+                Tell us what you need and get started in minutes.
+            </p>
+
+        </div>
+
+
+        <!-- Steps -->
+
+        <div class="steps-grid">
+
+
+            <!-- Step 1 -->
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <div class="step-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    Find a Service
+                </h3>
+
+                <p>
+                    Browse our service categories and choose
+                    the service that matches your requirement.
+                </p>
+
+            </div>
+
+
+            <!-- Step 2 -->
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <div class="step-icon">
+                    📝
+                </div>
+
+                <h3>
+                    Tell Us Your Problem
+                </h3>
+
+                <p>
+                    Describe what you need and provide the
+                    necessary details about your request.
+                </p>
+
+            </div>
+
+
+            <!-- Step 3 -->
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <div class="step-icon">
+                    ✅
+                </div>
+
+                <h3>
+                    Get Your Solution
+                </h3>
+
+                <p>
+                    Track your request and connect with the
+                    right service provider or solution.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bottom CTA -->
+
+        <div class="how-cta">
+
+            <h3>
+                Have a problem? Let's solve it.
+            </h3>
+
+            <a href="/services">
+                Find a Service →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     HOW IT WORKS CSS
+================================= -->
+
+<style>
+
+    /* =================================
+       SECTION
+    ================================= */
+
+    .how-section {
+
+        width: 100%;
+
+        padding: 100px 20px;
+
+        background: #151515;
+
+        box-sizing: border-box;
+    }
+
+
+    .how-container {
+
+        width: 100%;
+
+        max-width: 1200px;
+
+        margin: 0 auto;
+    }
+
+
+    /* =================================
+       STEPS GRID
+    ================================= */
+
+    .steps-grid {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 25px;
+
+        position: relative;
+    }
+
+
+    /* =================================
+       STEP CARD
+    ================================= */
+
+    .step-card {
+
+        position: relative;
+
+        padding: 35px 28px;
+
+        min-height: 300px;
+
+        box-sizing: border-box;
+
+        background: #111;
+
+        border: 1px solid #292929;
+
+        border-radius: 18px;
+
+        text-align: center;
+
+        transition: 0.3s;
+    }
+
+
+    .step-card:hover {
+
+        transform: translateY(-7px);
+
+        border-color: rgba(0, 210, 255, 0.45);
+
+        box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.25);
+    }
+
+
+    /* =================================
+       NUMBER
+    ================================= */
+
+    .step-number {
+
+        position: absolute;
+
+        top: 18px;
+
+        right: 20px;
+
+        color: #333;
+
+        font-size: 14px;
+
+        font-weight: 700;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* =================================
+       ICON
+    ================================= */
+
+    .step-icon {
+
+        width: 70px;
+
+        height: 70px;
+
+        margin: 15px auto 25px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-radius: 20px;
+
+        background:
+            rgba(0, 210, 255, 0.08);
+
+        border: 1px solid
+            rgba(0, 210, 255, 0.12);
+
+        font-size: 32px;
+    }
+
+
+    /* =================================
+       TITLE
+    ================================= */
+
+    .step-card h3 {
+
+        margin: 0 0 12px;
+
+        color: #ffffff;
+
+        font-size: 21px;
+    }
+
+
+    /* =================================
+       DESCRIPTION
+    ================================= */
+
+    .step-card p {
+
+        margin: 0;
+
+        color: #858585;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /* =================================
+       CTA
+    ================================= */
+
+    .how-cta {
+
+        margin-top: 55px;
+
+        padding: 30px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 20px;
+
+        background: #1b1b1b;
+
+        border: 1px solid #292929;
+
+        border-radius: 15px;
+
+        box-sizing: border-box;
+    }
+
+
+    .how-cta h3 {
+
+        margin: 0;
+
+        color: #ffffff;
+
+        font-size: 20px;
+    }
+
+
+    .how-cta a {
+
+        display: inline-block;
+
+        padding: 12px 20px;
+
+        border-radius: 8px;
+
+        background: #00d2ff;
+
+        color: #000;
+
+        text-decoration: none;
+
+        font-size: 14px;
+
+        font-weight: 600;
+
+        white-space: nowrap;
+
+        transition: 0.3s;
+    }
+
+
+    .how-cta a:hover {
+
+        background: #00b8df;
+
+        transform: translateY(-2px);
+    }
+
+
+    /* =================================
+       TABLET
+    ================================= */
+
+    @media (max-width: 900px) {
+
+        .how-section {
+
+            padding: 80px 18px;
+        }
+
+
+        .steps-grid {
+
+            grid-template-columns:
+                repeat(2, 1fr);
+        }
+
+
+        .step-card:last-child {
+
+            grid-column:
+                1 / -1;
+
+            max-width: 450px;
+
+            width: 100%;
+
+            margin: 0 auto;
+        }
+
+    }
+
+
+    /* =================================
+       MOBILE
+    ================================= */
+
+    @media (max-width: 600px) {
+
+        .how-section {
+
+            padding: 65px 15px;
+        }
+
+
+        .steps-grid {
+
+            grid-template-columns: 1fr;
+
+            gap: 15px;
+        }
+
+
+        .step-card {
+
+            min-height: auto;
+
+            padding: 30px 22px;
+        }
+
+
+        .step-card:last-child {
+
+            grid-column: auto;
+
+            max-width: none;
+        }
+
+
+        .how-cta {
+
+            margin-top: 35px;
+
+            padding: 25px 20px;
+
+            flex-direction: column;
+
+            text-align: center;
+        }
+
+
+        .how-cta h3 {
+
+            font-size: 18px;
+        }
+
+
+        .how-cta a {
+
+            width: 100%;
+
+            text-align: center;
+
+            box-sizing: border-box;
+        }
+
+    }
+
+</style>
+
+
+<!-- =================================
+     SERVICE SECTION CSS
+================================= -->
+
+<style>
+
+    /* =================================
+       SECTION
+    ================================= */
+
+    .services-section {
+
+        width: 100%;
+
+        background: #111;
+
+        padding: 90px 20px;
+
+        box-sizing: border-box;
+    }
+
+
+    .services-container {
+
+        width: 100%;
+
+        max-width: 1200px;
+
+        margin: 0 auto;
+    }
+
+
+    /* =================================
+       HEADING
+    ================================= */
+
+    .section-heading {
+
+        max-width: 700px;
+
+        margin: 0 auto 50px;
+
+        text-align: center;
+    }
+
+
+    .section-badge {
+
+        display: inline-block;
+
+        color: #00d2ff;
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .section-heading h2 {
+
+        margin: 0;
+
+        color: #ffffff;
+
+        font-size: clamp(32px, 4vw, 48px);
+
+        line-height: 1.15;
+
+        letter-spacing: -1px;
+    }
+
+
+    .section-heading h2 span {
+
+        color: #00d2ff;
+    }
+
+
+    .section-heading p {
+
+        margin: 18px auto 0;
+
+        max-width: 600px;
+
+        color: #888;
+
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+    /* =================================
+       GRID
+    ================================= */
+
+    .services-grid {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 20px;
+    }
+
+
+    /* =================================
+       SERVICE CARD
+    ================================= */
+
+    .service-card {
+
+        display: flex;
+
+        flex-direction: column;
+
+        min-height: 250px;
+
+        padding: 25px;
+
+        box-sizing: border-box;
+
+        background: #181818;
+
+        border: 1px solid #292929;
+
+        border-radius: 16px;
+
+        text-decoration: none;
+
+        transition:
+            transform 0.3s,
+            border-color 0.3s,
+            background 0.3s;
+    }
+
+
+    .service-card:hover {
+
+        transform: translateY(-6px);
+
+        border-color: rgba(0, 210, 255, 0.45);
+
+        background: #1c1c1c;
+    }
+
+
+    /* =================================
+       ICON
+    ================================= */
+
+    .service-icon {
+
+        width: 55px;
+
+        height: 55px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        margin-bottom: 20px;
+
+        border-radius: 14px;
+
+        background: rgba(0, 210, 255, 0.08);
+
+        font-size: 27px;
+    }
+
+
+    /* =================================
+       CONTENT
+    ================================= */
+
+    .service-content h3 {
+
+        margin: 0 0 10px;
+
+        color: #ffffff;
+
+        font-size: 20px;
+    }
+
+
+    .service-content p {
+
+        margin: 0;
+
+        color: #858585;
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .service-link {
+
+        display: inline-block;
+
+        margin-top: 22px;
+
+        color: #00d2ff;
+
+        font-size: 14px;
+
+        font-weight: 600;
+    }
+
+
+    /* =================================
+       VIEW ALL
+    ================================= */
+
+    .services-button {
+
+        text-align: center;
+
+        margin-top: 40px;
+    }
+
+
+    .services-button a {
+
+        display: inline-block;
+
+        padding: 12px 22px;
+
+        border: 1px solid #333;
+
+        border-radius: 8px;
+
+        color: #ffffff;
+
+        background: #181818;
+
+        text-decoration: none;
+
+        font-size: 14px;
+
+        transition: 0.3s;
+    }
+
+
+    .services-button a:hover {
+
+        border-color: #00d2ff;
+
+        color: #00d2ff;
+    }
+
+
+    /* =================================
+       TABLET
+    ================================= */
+
+    @media (max-width: 900px) {
+
+        .services-section {
+
+            padding: 70px 18px;
+        }
+
+
+        .services-grid {
+
+            grid-template-columns:
+                repeat(2, 1fr);
+        }
+
+    }
+
+
+    /* =================================
+       MOBILE
+    ================================= */
+
+    @media (max-width: 600px) {
+
+        .services-section {
+
+            padding: 60px 15px;
+        }
+
+
+        .section-heading {
+
+            margin-bottom: 35px;
+        }
+
+
+        .section-heading h2 {
+
+            font-size: 32px;
+        }
+
+
+        .section-heading p {
+
+            font-size: 14px;
+        }
+
+
+        .services-grid {
+
+            grid-template-columns: 1fr;
+
+            gap: 15px;
+        }
+
+
+        .service-card {
+
+            min-height: auto;
+
+            padding: 22px;
+        }
+
+    }
+
+</style>
+
+
+<!-- ================================
+     HERO CSS
+================================= -->
+
+<style>
+
+    /* =================================
+       HERO SECTION
+    ================================= */
+
+    .hero-section {
+
+        width: 100%;
+
+        min-height: calc(100vh - 70px);
+
+        background:
+            radial-gradient(
+                circle at 20% 20%,
+                rgba(0, 210, 255, 0.10),
+                transparent 35%
+            ),
+            radial-gradient(
+                circle at 80% 70%,
+                rgba(0, 210, 255, 0.08),
+                transparent 35%
+            ),
+            #111;
+
+        display: flex;
+
+        align-items: center;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+
+    /* =================================
+       CONTAINER
+    ================================= */
+
+    .hero-container {
+
+        width: 100%;
+
+        max-width: 1200px;
+
+        margin: 0 auto;
+
+        padding: 70px 25px;
+
+        box-sizing: border-box;
+
+        display: grid;
+
+        grid-template-columns: 1.1fr 0.9fr;
+
+        align-items: center;
+
+        gap: 60px;
+    }
+
+
+    /* =================================
+       LEFT CONTENT
+    ================================= */
+
+    .hero-content {
+
+        max-width: 650px;
+    }
+
+
+    .hero-badge {
+
+        display: inline-block;
+
+        padding: 8px 15px;
+
+        margin-bottom: 22px;
+
+        border: 1px solid rgba(0, 210, 255, 0.35);
+
+        border-radius: 50px;
+
+        background: rgba(0, 210, 255, 0.08);
+
+        color: #00d2ff;
+
+        font-size: 14px;
+
+        font-weight: 600;
+    }
+
+
+    .hero-content h1 {
+
+        margin: 0;
+
+        color: #ffffff;
+
+        font-size: clamp(42px, 5vw, 70px);
+
+        line-height: 1.05;
+
+        letter-spacing: -2px;
+
+        font-weight: 800;
+    }
+
+
+    .hero-content h1 span {
+
+        color: #00d2ff;
+    }
+
+
+    .hero-content p {
+
+        max-width: 600px;
+
+        margin: 25px 0 30px;
+
+        color: #a8a8a8;
+
+        font-size: 18px;
+
+        line-height: 1.7;
+    }
+
+
+    /* =================================
+       BUTTONS
+    ================================= */
+
+    .hero-buttons {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .hero-btn {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        min-width: 160px;
+
+        padding: 13px 22px;
+
+        border-radius: 9px;
+
+        text-decoration: none;
+
+        font-size: 15px;
+
+        font-weight: 600;
+
+        transition: 0.3s;
+
+        box-sizing: border-box;
+    }
+
+
+    .primary-btn {
+
+        background: white;
+
+        color: #000;
+    }
+
+
+    .primary-btn:hover {
+
+        background: #00b8df;
+
+        transform: translateY(-2px);
+    }
+
+
+    .secondary-btn {
+
+        border: 1px solid #444;
+
+        background: #1a1a1a;
+
+        color: #ffffff;
+    }
+
+
+    .secondary-btn:hover {
+
+        border-color: #00d2ff;
+
+        background: #202020;
+
+        transform: translateY(-2px);
+    }
+
+
+    /* =================================
+       RIGHT VISUAL
+    ================================= */
+
+    .hero-visual {
+
+        position: relative;
+
+        min-height: 430px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+    }
+
+
+    .hero-card {
+
+        width: 280px;
+
+        min-height: 180px;
+
+        padding: 30px;
+
+        box-sizing: border-box;
+
+        border: 1px solid #333;
+
+        border-radius: 20px;
+
+        background: #1b1b1b;
+
+        box-shadow:
+            0 25px 70px rgba(0, 0, 0, 0.45);
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        position: relative;
+
+        z-index: 2;
+    }
+
+
+    .hero-card-icon {
+
+        width: 65px;
+
+        height: 65px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        margin-bottom: 18px;
+
+        border-radius: 18px;
+
+        background: rgba(0, 210, 255, 0.10);
+
+        font-size: 30px;
+    }
+
+
+    .hero-card h3 {
+
+        margin: 0 0 8px;
+
+        color: #ffffff;
+
+        font-size: 21px;
+    }
+
+
+    .hero-card p {
+
+        margin: 0;
+
+        color: #888;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    /* =================================
+       FLOATING CARDS
+    ================================= */
+
+    .floating-card {
+
+        position: absolute;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+        padding: 12px 16px;
+
+        background: #1b1b1b;
+
+        border: 1px solid #333;
+
+        border-radius: 12px;
+
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+
+        z-index: 3;
+
+        animation: floating 4s ease-in-out infinite;
+    }
+
+
+    .floating-card > span {
+
+        font-size: 24px;
+    }
+
+
+    .floating-card strong {
+
+        display: block;
+
+        color: #ffffff;
+
+        font-size: 13px;
+    }
+
+
+    .floating-card small {
+
+        display: block;
+
+        margin-top: 3px;
+
+        color: #777;
+
+        font-size: 11px;
+    }
+
+
+    .card-one {
+
+        top: 35px;
+
+        left: 15px;
+    }
+
+
+    .card-two {
+
+        right: 0;
+
+        top: 130px;
+
+        animation-delay: 0.7s;
+    }
+
+
+    .card-three {
+
+        bottom: 40px;
+
+        left: 30px;
+
+        animation-delay: 1.2s;
+    }
+
+
+    @keyframes floating {
+
+        0%,
+        100% {
+
+            transform: translateY(0);
+        }
+
+        50% {
+
+            transform: translateY(-10px);
+        }
+    }
+
+
+    /* =================================
+       TABLET
+    ================================= */
+
+    @media (max-width: 900px) {
+
+        .hero-container {
+
+            grid-template-columns: 1fr;
+
+            text-align: center;
+
+            gap: 30px;
+
+            padding-top: 60px;
+
+            padding-bottom: 60px;
+        }
+
+
+        .hero-content {
+
+            max-width: 700px;
+
+            margin: 0 auto;
+        }
+
+
+        .hero-content p {
+
+            margin-left: auto;
+
+            margin-right: auto;
+        }
+
+
+        .hero-buttons {
+
+            justify-content: center;
+        }
+
+
+        .hero-visual {
+
+            min-height: 380px;
+
+            max-width: 550px;
+
+            width: 100%;
+
+            margin: 0 auto;
+        }
+
+    }
+
+
+    /* =================================
+       MOBILE
+    ================================= */
+
+    @media (max-width: 600px) {
+
+        .hero-section {
+
+            min-height: auto;
+        }
+
+
+        .hero-container {
+
+            padding: 45px 18px 55px;
+
+            gap: 10px;
+        }
+
+
+        .hero-badge {
+
+            font-size: 12px;
+
+            padding: 7px 12px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .hero-content h1 {
+
+            font-size: 40px;
+
+            letter-spacing: -1.5px;
+        }
+
+
+        .hero-content p {
+
+            font-size: 15px;
+
+            line-height: 1.6;
+
+            margin: 20px 0 25px;
+        }
+
+
+        .hero-buttons {
+
+            flex-direction: column;
+
+            width: 100%;
+
+            gap: 10px;
+        }
+
+
+        .hero-btn {
+
+            width: 100%;
+
+            max-width: 320px;
+
+            margin: 0 auto;
+        }
+
+
+        .hero-visual {
+
+            min-height: 330px;
+
+            margin-top: 15px;
+        }
+
+
+        .hero-card {
+
+            width: 230px;
+
+            min-height: 160px;
+
+            padding: 22px;
+        }
+
+
+        .hero-card-icon {
+
+            width: 55px;
+
+            height: 55px;
+
+            font-size: 25px;
+        }
+
+
+        .hero-card h3 {
+
+            font-size: 18px;
+        }
+
+
+        .floating-card {
+
+            padding: 9px 12px;
+        }
+
+
+        .floating-card > span {
+
+            font-size: 20px;
+        }
+
+
+        .floating-card strong {
+
+            font-size: 11px;
+        }
+
+
+        .floating-card small {
+
+            font-size: 9px;
+        }
+
+
+        .card-one {
+
+            top: 15px;
+
+            left: 0;
+        }
+
+
+        .card-two {
+
+            right: 0;
+
+            top: 95px;
+        }
+
+
+        .card-three {
+
+            bottom: 15px;
+
+            left: 5px;
+        }
+
+    }
+
+</style>
+
+{% endblock %}

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}My Website{% endblock %}
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        .navbar {
+            width: 100%;
+            height: 70px;
+
+            background: #151515;
+
+            border-bottom: 1px solid #292929;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            box-sizing: border-box;
+        }
+
+
+        /* Navbar container */
+
+        .nav-container {
+            width: 100%;
+            max-width: 1200px;
+
+            height: 100%;
+
+            margin: 0 auto;
+
+            padding: 0 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            box-sizing: border-box;
+        }
+
+
+        /* Logo */
+
+        .logo {
+            text-decoration: none;
+
+            color: #ffffff;
+
+            font-size: 24px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.5px;
+
+            transition: 0.3s;
+        }
+
+        .logo:hover {
+            color: #00d2ff;
+        }
+
+
+        /* Navigation links */
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+        }
+
+
+        /* Individual link */
+
+        .nav-link {
+
+            position: relative;
+
+            text-decoration: none;
+
+            color: #bdbdbd;
+
+            padding: 10px 16px;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+
+        /* Hover */
+
+        .nav-link:hover {
+
+            color: #ffffff;
+
+            background: #222222;
+        }
+
+
+        /* Bottom active line */
+
+        .nav-link::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+
+            bottom: 3px;
+
+            width: 0;
+
+            height: 2px;
+
+            background: #00d2ff;
+
+            transform: translateX(-50%);
+
+            transition: 0.3s;
+        }
+
+        .nav-link:hover::after {
+
+            width: 60%;
+        }
+
+
+        /* =========================================
+           MENU BUTTON
+        ========================================= */
+
+        .menu-btn {
+
+            display: none;
+
+            background: transparent;
+
+            border: 1px solid #333;
+
+            color: white;
+
+            font-size: 25px;
+
+            width: 42px;
+
+            height: 42px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+        .menu-btn:hover {
+
+            background: #222;
+
+            border-color: #00d2ff;
+        }
+
+
+        /* =========================================
+           GENERAL
+        ========================================= */
+
+        body {
+
+            margin: 0;
+
+            padding: 0;
+
+            background: #111;
+
+            color: #ffffff;
+
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* =========================================
+           MOBILE NAVBAR
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+            .navbar {
+
+                height: 65px;
+            }
+
+
+            .nav-container {
+
+                padding: 0 15px;
+
+                flex-direction: row;
+            }
+
+
+            .logo {
+
+                font-size: 22px;
+            }
+
+
+            /* Show menu button */
+
+            .menu-btn {
+
+                display: flex;
+            }
+
+
+            /* Mobile navigation */
+
+            .nav-links {
+
+                position: absolute;
+
+                top: 65px;
+
+                left: 0;
+
+                width: 100%;
+
+                background: #151515;
+
+                border-top: 1px solid #292929;
+                border-bottom: 1px solid #292929;
+
+                display: none;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                gap: 0;
+
+                padding: 10px 0;
+            }
+
+
+            /* When menu is opened */
+
+            .nav-links.active {
+
+                display: flex;
+            }
+
+
+            .nav-link {
+
+                width: 100%;
+
+                box-sizing: border-box;
+
+                padding: 13px 20px;
+
+                border-radius: 0;
+
+                font-size: 15px;
+            }
+
+
+            .nav-link:hover {
+
+                background: #222;
+            }
+
+
+            .nav-link::after {
+
+                display: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+
+            <!-- Logo -->
+
+            <a href="/" class="logo">
+                MyWebsite
+            </a>
+
+
+            <!-- Navigation -->
+
+            <div class="nav-links" id="navLinks">
+
+                <a href="/" class="nav-link">
+                    Home
+                </a>
+
+                
+                <a href="/services" class="nav-link">
+    Services
+                </a>
+<a href="/add-problem" class="nav-link">
+    Add Problem
+</a>
+                <a href="/contact" class="nav-link">
+                    Contact
+                </a>
+
+
+                <a href="/login" class="nav-link">
+                    Admin
+                </a>
+
+                
+
+            </div>
+
+
+            <!-- Mobile Menu Button -->
+
+            <button class="menu-btn"
+                    id="menuBtn"
+                    type="button">
+
+                ☰
+
+            </button>
+
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= PAGE CONTENT ================= -->
+
+    <main>
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+    <!-- LOGIN POPUP -->
+{% if not session.get("user_name") and not session.get("admin") %}
+
+<style>
+    /* Popup Background */
+    #loginPopup {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.75);
+        z-index: 99999;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    /* Popup Box */
+    .login-popup-box {
+        position: relative;
+        width: 100%;
+        max-width: 420px;
+        background: #151515;
+        border: 1px solid #333;
+        border-radius: 18px;
+        padding: 35px 30px;
+        text-align: center;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+        animation: popupShow 0.3s ease;
+    }
+
+    @keyframes popupShow {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    /* Close Button */
+    .login-popup-close {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        width: 32px;
+        height: 32px;
+        border: none;
+        border-radius: 50%;
+        background: #292929;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .login-popup-close:hover {
+        background: #dc3545;
+    }
+
+    .login-popup-icon {
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+
+    .login-popup-box h2 {
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .login-popup-box p {
+        color: #aaa;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .login-popup-btn {
+        display: block;
+        width: 100%;
+        padding: 13px;
+        border-radius: 8px;
+        background: #00d2ff;
+        color: #000;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .login-popup-btn:hover {
+        background: white;
+    }
+
+    @media (max-width: 500px) {
+        .login-popup-box {
+            padding: 30px 20px;
+        }
+    }
+</style>
+
+
+<div id="loginPopup">
+
+    <div class="login-popup-box">
+
+        <!-- CLOSE -->
+        <button
+            type="button"
+            class="login-popup-close"
+            onclick="closeLoginPopup()"
+        >
+            ×
+        </button>
+
+        <div class="login-popup-icon">
+            🔐
+        </div>
+
+        <h2>Login Required</h2>
+
+        <p>
+            Please login to continue using our website.
+            Login to access all features and services.
+        </p>
+
+        <a
+            href="{{ url_for('login') }}"
+            class="login-popup-btn"
+        >
+            Login Now
+        </a>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    const loginPopup = document.getElementById("loginPopup");
+
+    /*
+        Popup show function
+    */
+    function showLoginPopup() {
+
+        if (loginPopup) {
+            loginPopup.style.display = "flex";
+        }
+
+    }
+
+
+    /*
+        Close popup
+    */
+    function closeLoginPopup() {
+
+        if (loginPopup) {
+            loginPopup.style.display = "none";
+        }
+
+    }
+
+
+    /*
+        First popup:
+        Page open hone ke 1 minute baad
+    */
+    setTimeout(function () {
+
+        showLoginPopup();
+
+    }, 60000);
+
+
+    /*
+        Popup close karne ke baad
+        dobara 1 minute baad show hoga
+    */
+    function startLoginReminder() {
+
+        setTimeout(function () {
+
+            showLoginPopup();
+
+            startLoginReminder();
+
+        }, 60000);
+
+    }
+
+
+    /*
+        Close ke baad reminder start
+    */
+    const closeButton = document.querySelector(".login-popup-close");
+
+    if (closeButton) {
+
+        closeButton.addEventListener("click", function () {
+
+            closeLoginPopup();
+
+            startLoginReminder();
+
+        });
+
+    }
+
+</script>
+
+{% endif %}
+
+    <!-- ================= NAVBAR SCRIPT ================= -->
+
+    <script>
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", function () {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+
+        /* Menu automatically close after clicking link */
+
+        document.querySelectorAll(".nav-link").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                navLinks.classList.remove("active");
+
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

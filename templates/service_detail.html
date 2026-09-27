@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ service.name }}
+{% endblock %}
+
+{% block content %}
+
+<style>
+
+.service-detail-page {
+    min-height: calc(100vh - 70px);
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.service-detail-card {
+    width: 100%;
+    max-width: 850px;
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 45px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.service-detail-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    background: #10252b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.service-category {
+    color: #00d2ff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.service-detail-card h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.service-description {
+    color: #bdbdbd;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.request-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #00d2ff;
+    color: #000;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.request-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+.back-btn {
+    display: inline-block;
+    margin-left: 15px;
+    text-decoration: none;
+    color: #aaa;
+}
+
+.back-btn:hover {
+    color: white;
+}
+
+
+@media (max-width: 600px) {
+
+    .service-detail-page {
+        padding: 35px 15px;
+    }
+
+    .service-detail-card {
+        padding: 30px 22px;
+    }
+
+    .service-detail-card h1 {
+        font-size: 30px;
+    }
+
+    .service-description {
+        font-size: 16px;
+    }
+
+    .back-btn {
+        display: block;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+}
+
+</style>
+
+
+<div class="service-detail-page">
+
+    <div class="service-detail-card">
+
+        <div class="service-detail-icon">
+            {{ service.icon }}
+        </div>
+
+        <div class="service-category">
+            {{ service.category }}
+        </div>
+
+        <h1>
+            {{ service.name }}
+        </h1>
+
+        <p class="service-description">
+            {{ service.description }}
+        </p>
+
+    <a href="/request-service/{{ service.id }}" class="request-btn">
+    Request This Service →
+</a>
+
+        <a href="/services" class="back-btn">
+            ← Back to Services
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

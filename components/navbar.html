@@ -1,0 +1,43 @@
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <a href="/" class="nav-logo">
+            Flask<span>App</span>
+        </a>
+
+        <!-- Hamburger -->
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+        <!-- Navigation -->
+        <div class="nav-menu" id="navMenu">
+
+            <a href="/" class="nav-link">
+                Home
+            </a>
+
+            <a href="/contact" class="nav-link">
+                Contact
+            </a>
+
+            <a href="/login" class="nav-link">
+                Admin
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+    });
+</script>

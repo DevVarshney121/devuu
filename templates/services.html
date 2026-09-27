@@ -1,0 +1,298 @@
+{% extends "base.html" %}
+
+{% block title %}
+Services
+{% endblock %}
+
+{% block content %}
+
+<section class="services-page">
+
+    <div class="services-page-container">
+
+        <div class="services-header">
+
+            <span>
+                OUR SERVICES
+            </span>
+
+            <h1>
+                Find the Right Service
+            </h1>
+
+            <p>
+                Explore our available services and find
+                the right solution for your needs.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+            {% for service in services %}
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    {{ service.icon }}
+                </div>
+
+                <div class="service-category">
+                    {{ service.category }}
+                </div>
+
+                <h2>
+                    {{ service.name }}
+                </h2>
+
+                <p>
+                    {{ service.description }}
+                </p>
+
+                <a href="/service/{{ service.id }}">
+                    View Service →
+                </a>
+
+            </div>
+
+            {% else %}
+
+            <div class="no-services">
+
+                <h2>
+                    No services available
+                </h2>
+
+                <p>
+                    Please check again later.
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+
+.services-page {
+
+    min-height: calc(100vh - 70px);
+
+    background: #111;
+
+    padding: 80px 20px;
+
+}
+
+.services-page-container {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+.services-header {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+
+}
+
+.services-header span {
+
+    color: #00d2ff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+.services-header h1 {
+
+    margin: 12px 0;
+
+    color: white;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+}
+
+.services-header p {
+
+    color: #888;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+.service-card {
+
+    padding: 28px;
+
+    background: #181818;
+
+    border: 1px solid #292929;
+
+    border-radius: 16px;
+
+    transition: .3s;
+
+}
+
+.service-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #00d2ff;
+
+}
+
+.service-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(0,210,255,.08);
+
+    border-radius: 15px;
+
+    font-size: 28px;
+
+    margin-bottom: 18px;
+
+}
+
+.service-category {
+
+    color: #00d2ff;
+
+    font-size: 12px;
+
+    margin-bottom: 8px;
+
+    text-transform: uppercase;
+
+}
+
+.service-card h2 {
+
+    color: white;
+
+    font-size: 21px;
+
+    margin: 0 0 12px;
+
+}
+
+.service-card p {
+
+    color: #888;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+    min-height: 65px;
+
+}
+
+.service-card a {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #00d2ff;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+.no-services {
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    color: white;
+
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .services-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .services-page {
+
+        padding: 55px 15px;
+
+    }
+
+    .services-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .service-card {
+
+        padding: 22px;
+
+    }
+
+}
+
+</style>
+
+{% endblock %}

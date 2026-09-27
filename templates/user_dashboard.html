@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}
+User Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-container">
+
+    <!-- Profile Card -->
+    <div class="profile-card">
+
+        {% if profile_image %}
+            <img src="{{ profile_image }}" 
+                 alt="Profile Image" 
+                 class="profile-image">
+        {% else %}
+            <div class="profile-placeholder">
+                {{ user_name[0] if user_name else "U" }}
+            </div>
+        {% endif %}
+
+        <div class="profile-info">
+            <h1>Welcome, {{ user_name }} 👋</h1>
+            <p>{{ user_email }}</p>
+        </div>
+
+        <a href="/user-logout" class="logout-btn">
+            Logout
+        </a>
+
+    </div>
+
+
+    <!-- Dashboard Cards -->
+    <div class="dashboard-grid">
+
+        <div class="dashboard-card">
+            <div class="card-icon">👤</div>
+            <h3>My Profile</h3>
+            <p>View and manage your profile information.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="card-icon">📊</div>
+            <h3>Activity</h3>
+            <p>Check your recent account activity.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="card-icon">⚙️</div>
+            <h3>Settings</h3>
+            <p>Manage your account settings.</p>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

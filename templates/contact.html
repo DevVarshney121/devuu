@@ -1,0 +1,248 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contact Us
+{% endblock %}
+
+{% block content %}
+
+<style>
+
+/* Contact Page */
+
+.contact-container {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    background: #111;
+}
+
+.contact-card {
+    width: 100%;
+    max-width: 550px;
+
+    padding: 28px;
+    box-sizing: border-box;
+
+    background: #1c1c1c;
+
+    border: 1px solid #333;
+    border-radius: 16px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.contact-card h1 {
+    margin: 0;
+
+    text-align: center;
+
+    color: #fff;
+
+    font-size: 32px;
+}
+
+.subtitle {
+    text-align: center;
+
+    color: #999;
+
+    margin: 8px 0 22px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+
+    color: #ddd;
+
+    margin-bottom: 6px;
+
+    font-size: 14px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 11px 13px;
+
+    border: 1px solid #444;
+
+    border-radius: 8px;
+
+    background: #111;
+
+    color: white;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.input-group input {
+    height: 44px;
+}
+
+.input-group textarea {
+    min-height: 90px;
+
+    height: 100px;
+
+    resize: vertical;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #00d2ff;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 210, 255, 0.1);
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #666;
+}
+
+.contact-card button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #00d2ff;
+
+    color: #000;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contact-card button:hover {
+    background: #00b8df;
+
+    transform: translateY(-2px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .contact-container {
+        padding: 15px;
+    }
+
+    .contact-card {
+        padding: 22px;
+    }
+
+    .contact-card h1 {
+        font-size: 28px;
+    }
+
+    .input-group textarea {
+        height: 90px;
+    }
+}
+
+</style>
+
+
+<div class="contact-container">
+
+    <div class="contact-card">
+
+        <h1>Contact Us</h1>
+
+        <p class="subtitle">
+            Have a question? Send us a message.
+        </p>
+
+
+        <form action="/contact" method="POST">
+
+
+            <!-- Name -->
+
+            <div class="input-group">
+
+                <label>Name</label>
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="input-group">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Message -->
+
+            <div class="input-group">
+
+                <label>Message</label>
+
+                <textarea
+                    name="message"
+                    placeholder="Enter your message"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <!-- Submit -->
+
+            <button type="submit">
+                Send Message
+            </button>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

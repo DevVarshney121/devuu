@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Contact</title>
+</head>
+
+<body>
+
+    <h1>Edit Contact</h1>
+
+    <form method="POST">
+
+        <label>Name</label>
+        <input
+            type="text"
+            name="name"
+            value="{{ contact.name }}"
+            required
+        >
+
+        <br><br>
+
+        <label>Email</label>
+        <input
+            type="email"
+            name="email"
+            value="{{ contact.email }}"
+            required
+        >
+
+        <br><br>
+
+        <label>Message</label>
+        <textarea
+            name="message"
+            required
+        >{{ contact.message }}</textarea>
+
+        <br><br>
+
+        <button type="submit">Update</button>
+
+    </form>
+
+    <br>
+
+    <a href="/admin">Back to Admin</a>
+
+</body>
+</html>
